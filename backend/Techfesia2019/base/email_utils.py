@@ -23,3 +23,17 @@ def welcomeEmail( to_email , from_email = 'codehrs2203@gmail.com' ):
     send_mail = EmailMultiAlternatives( _subject , text_message , _from , _to )
     send_mail.attach_alternative(content_message,'text/html')
     send_mail.send()
+
+def password_update_succesfull( to_email , from_email = 'codehrs2203@gmail.com' ):
+    _subject = "password changed succesfully"
+    _from = from_email
+    _to = to_email
+
+    # content will be a html file
+    content_message = render_to_string( 'password_updated.html' , {})
+    text_message = strip_tags(content_message)
+
+    # send_mail( _subject , content_message , _from, _to, fail_silently=True)
+    send_mail = EmailMultiAlternatives( _subject , text_message , _from , _to )
+    send_mail.attach_alternative(content_message,'text/html')
+    send_mail.send()
