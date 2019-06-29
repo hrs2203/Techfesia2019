@@ -85,7 +85,7 @@ ROOT_URLCONF = 'Techfesia2019.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [ os.path.join( BASE_DIR , 'base' , 'email_templates' ) ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
