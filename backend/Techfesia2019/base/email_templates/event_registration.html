@@ -1,0 +1,16 @@
+{% extends 'base_file.html' %}
+
+{% block title %} event registration {% endblock %}
+
+{% block body_content %}
+
+    <h3> Hey {{ user_name }} !! </h3>
+    
+    {% if isConfirmed %}
+        <h4> Congratulations! You have successfully registered for the event {{ event_title }}</h4>
+    {% else %}
+        <h4> Your registration for the event {{ event_title }} has been put on the <b> Waiting List</b></h4>
+        <p>May the force drive it to confirmation.</p>
+    {% endif %}
+
+{% endblock %}

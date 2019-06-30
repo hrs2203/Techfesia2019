@@ -7,7 +7,7 @@ def email_test(request):
     # a representation of how this can be used in program.
     send_to_list = ['hrishabh2203@gmail.com']
     # email_utils.password_update_succesfull(send_to_list)
-    email_utils.welcomeEmail(send_to_list)
+    email_utils.team_invitation(send_to_list)
     print("----------------done--------------------")
     return HttpResponse(status=200)
     
